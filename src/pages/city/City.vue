@@ -3,10 +3,14 @@
     <city-header></city-header>
     <city-search></city-search>
     <city-list :cities="cities"
-               :hotCities="hotCities">
+               :hotCities="hotCities"
+               :letter="letter"
+    >
 
     </city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-alphabet :cities="cities"
+                   @change="handLetterChange"
+    ></city-alphabet>
   </div>
 </template>
 
@@ -21,7 +25,8 @@
         data(){
             return{
               hotCities:[],
-              cities:{}
+              cities:{},
+              letter:''
             }
         },
         components:{
@@ -31,6 +36,9 @@
           CityAlphabet
         },
         methods:{
+          handLetterChange(letter){
+              this.letter = letter
+          },
           getCityInfo(){
             axios.get('/api/city.json')
                  .then(this.getCityInfoSucc)

@@ -1,10 +1,15 @@
 <template>
     <ul class="list">
       <li class="item"
-          v-for="(item,key,index) of cities"
-          :key="key"
+          v-for="item of letters"
+          :key="item"
+          :ref= 'item'
+          @click="handLetterClick"
+          @touchstart="handleTouchStart"
+          @touchmove="handleTouchMove"
+          @touchend="handleTouchEnd"
       >
-        {{key}}
+        {{item}}
       </li>
     </ul>
 </template>
@@ -15,10 +20,46 @@
         props:{
           cities:Object
         },
+        computed:{
+          letters(){
+            const letters = [];
+            for(let i in this.cities){
+              letters.push(i)
+            }
+            return letters; //['A','B'...'Z']
+          }
+        },
         data(){
             return{
-
+              touchStatus:false  //标识位
             }
+        },
+        methods:{
+          handLetterClick(e){
+            this.$emit('change',e.target.innerText);
+          },
+          handleTouchStart(){
+            this.touchStatus = true;
+          },
+          handleTouchMove(e){
+            if(this.touchStatus){
+//              e.touches[0]表示手指的一些信息
+              const startY = this.$refs['A'][0].offsetTop;
+              const touchY = e.touches[0].clientY;
+              const distandtouchY = touchY - 79;
+              const index = Math.floor((distandtouchY - startY)/20);
+//              console.log(index);
+//              console.log(this.letters[index]);
+              if(index >= 0 && index < this.letters.length){
+                this.$emit('change',this.letters[index]);
+              }
+//              console.log(e.touches[0]);
+//              console.log(e.touches);
+            }
+          },
+          handleTouchEnd(){
+            this.touchStatus = false;
+          }
         }
     }
 </script>
