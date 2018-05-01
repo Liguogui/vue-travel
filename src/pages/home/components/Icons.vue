@@ -99,36 +99,38 @@
     /*height: 0*/
     /*padding-bottom: 50%*/
     /*background-color: green*/
-    .icon
-      position:relative
-      overflow:hidden
-      float: left;
-      width: 25%
-      height: 0
-      padding-bottom 25%
-      /*background-color: red*/
-      .icon-img
-        position:absolute
-        top:0
-        left:0
-        right:0
-        bottom:.44rem
-        /*background-color: blue*/
-        box-sizing:border-box
-        padding:.06rem
-        .icon-img-content
-          display:block
-          margin: 0 auto
-          height: 100%
-      .icon-desc
-        position:absolute
-        left:0
-        right:0
-        bottom:0
-        height: .44rem
-        line-height: .44rem
-        color:$darkTextColor
-        text-align:center
-        ellipses()
+    .icons
+      margin-top: .1rem
+      .icon
+        position: relative
+        overflow: hidden
+        float: left;
+        width: 25%
+        height: 0
+        padding-bottom 25%
+        /*background-color: red*/
+        .icon-img
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: .44rem
+          /*background-color: blue*/
+          box-sizing: border-box
+          padding: .06rem
+          .icon-img-content
+            display: block
+            margin: 0 auto
+            height: 100%
+        .icon-desc
+          position: absolute
+          left: 0
+          right: 0
+          bottom: 0
+          height: .44rem
+          line-height: .44rem
+          color: $darkTextColor
+          text-align: center
+          ellipses()
 
 </style>
