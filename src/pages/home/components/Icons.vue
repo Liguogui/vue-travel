@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
 
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
@@ -19,55 +19,14 @@
 <script>
     export default{
         name:'HomeIcons',
+        props:{
+          iconList:Array
+        },
         data(){
             return{
-              iconList:[
-                {
-                  id:'001',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                  desc:'景点门票'
-                },
-                {
-                  id:'002',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-                  desc:'Q+精选'
-                },
-                {
-                  id:'003',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-                  desc:'杭州乐园'
-                },
-                {
-                  id:'004',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-                  desc:'千岛湖'
-                },
-                {
-                  id:'005',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                  desc:'景点门票'
-                },
-                {
-                  id:'006',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-                  desc:'Q+精选'
-                },
-                {
-                  id:'007',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-                  desc:'杭州乐园'
-                },
-                {
-                  id:'008',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-                  desc:'千岛湖'
-                },
-                {
-                  id:'009',
-                  imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/b8/c5dcdb58deec2402.png',
-                  desc:'西溪湿地'
-                }
-              ]
+              swiperOption:{
+                  autoplay:false
+              }
             }
         },
         computed:{

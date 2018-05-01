@@ -22,28 +22,12 @@
 <script>
     export default{
         name:'HomeRecommend',
+        props:{
+          recommendList:Array
+        },
         data(){
             return{
-              recommendList:[
-                {
-                  id:'001',
-                  imgUrl:'http://img1.qunarzz.com/sight/p0/1709/28/288fbeccc335f774a3.img.jpg_200x200_4a81bde9.jpg',
-                  title:'“最忆是杭州”- G20峰会特别版《印象西湖》',
-                  desc:'灯光效果绝佳，唯美与震撼并存，如果说是看灯光秀，那她是完美的。'
-                },
-                {
-                  id:'002',
-                  imgUrl:'http://img1.qunarzz.com/sight/p0/1709/28/288fbeccc335f774a3.img.jpg_200x200_4a81bde9.jpg',
-                  title:'“最忆是杭州”- G20峰会特别版《印象西湖》',
-                  desc:'灯光效果绝佳，唯美与震撼并存，如果说是看灯光秀，那她是完美的。'
-                },
-                {
-                  id:'003',
-                  imgUrl:'http://img1.qunarzz.com/sight/p0/1709/28/288fbeccc335f774a3.img.jpg_200x200_4a81bde9.jpg',
-                  title:'“最忆是杭州”- G20峰会特别版《印象西湖》',
-                  desc:'灯光效果绝佳，唯美与震撼并存，如果说是看灯光秀，那她是完美的。'
-                }
-              ]
+
             }
         }
     }
