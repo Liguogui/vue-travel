@@ -33,7 +33,7 @@
         },
         computed:{
           hasNoData(){
-            return !list.length
+            return !this.list.length
           }
         },
         watch:{
