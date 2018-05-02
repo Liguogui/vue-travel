@@ -38,7 +38,7 @@
         },
         updated(){     //重新渲染时调用
             this.startY = this.$refs['A'][0].offsetTop;
-            console.log(this.startY);
+//            console.log(this.startY);
         },
         methods:{
           handLetterClick(e){

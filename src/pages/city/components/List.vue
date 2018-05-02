@@ -5,7 +5,9 @@
         <div class="area">
           <div class="title border-topbottom">当前城市</div>
           <div class="button-list">
-            <div class="button-wrap">
+            <div class="button-wrap"
+                 @click="handCityClick(currentCity)"
+            >
               <div class="button">{{this.currentCity}}</div>
             </div>
           </div>
@@ -57,16 +59,6 @@
       cities: Object,
       letter:String
     },
-    methods:{
-      handCityClick(city){
-//        this.$store.commit('changeCity',city);
-        this.changeCity(city);
-        this.$router.push('/');
-      },
-      ...mapMutations({
-        changeCity:'changeCity'
-      })
-    },
     data(){
         return{
 
@@ -88,8 +80,17 @@
       ...mapState({
         currentCity:'city'
       })
+    },
+    methods:{
+      handCityClick(city){
+  //        this.$store.commit('changeCity',city);
+        this.changeCity(city);
+        this.$router.push('/');
+      },
+      ...mapMutations({
+        changeCity:'changeCity'
+      })
     }
-
   }
 </script>
 
