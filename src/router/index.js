@@ -13,6 +13,9 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+        // function() {
+        //   return import('@/pages/home/Home')
+        // }
     },
     {
       path: '/city',
