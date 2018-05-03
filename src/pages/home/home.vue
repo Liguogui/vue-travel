@@ -52,12 +52,12 @@ export default{
     }
   },
   mounted(){
-//    console.log('mounted');
+    console.log('mounted');
     this.lastCity = this.city;
     this.getHomeInfo()
   },
   activated(){ //页面重新被显示的时候
-//    console.log('activated');
+    console.log('activated');
     if(this.lastCity !== this.city){
       this.lastCity = this.city;
       this.getHomeInfo();
