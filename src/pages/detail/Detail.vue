@@ -53,6 +53,9 @@
         },
         mounted(){
           this.getDetailInfo();
+        },
+        activated(){
+          this.getDetailInfo();
         }
 
     }
