@@ -32,7 +32,7 @@
   }
 </script>
 
-<style rel="stylesheet/stylus" lang="stylus" scoped >
+<style rel="stylesheet/stylus" lang="stylus" scoped>
   @import "~styles/mixins.styl"
   .title
     height: .8rem
@@ -58,7 +58,6 @@
         line-height: .6rem
         color: #ccc
         ellipses()
-
 
 </style>
 

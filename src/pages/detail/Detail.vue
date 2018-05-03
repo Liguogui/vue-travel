@@ -48,6 +48,7 @@
                 this.bannerImg = data.bannerImg;
                 this.gallaryImgs = data.gallaryImgs;
                 this.list = data.categoryList;
+
               }
           }
         },
@@ -61,7 +62,7 @@
     }
 </script>
 
-<style rel="stylesheet/stylus" lang="stylus" scoped>
+<style  lang="stylus" scoped>
   .content
     height: 50rem
 </style>

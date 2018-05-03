@@ -59,5 +59,6 @@
       color: #fff
       .arrow-icon
         margin-left :-.04rem
-        font-size :.24rem
+        font-size: .24rem
+                                                                                                                                                                                                                }
 </style>

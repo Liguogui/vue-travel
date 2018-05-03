@@ -17,7 +17,7 @@
  import axios from 'axios'
  import { mapState } from 'vuex'
 
-export default{
+ export default{
   name:'Home',
   components:{
     HomeHeader,
@@ -69,6 +69,6 @@ export default{
 }
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
 
 </style>
