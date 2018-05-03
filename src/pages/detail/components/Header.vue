@@ -37,21 +37,24 @@
         },
         methods:{
           handleScroll(){
-              let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-              if (scrollTop > 60){
-                let opacity = scrollTop/140;
-                opacity = (opacity > 1) ? 1 : opacity;
-                this.opacityStyle = {
-                  opacity:opacity
-                };
-                this.showAbs = false
-              } else{
-                this.showAbs = true
-              }
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (scrollTop > 60){
+              let opacity = scrollTop/140;
+              opacity = (opacity > 1) ? 1 : opacity;
+              this.opacityStyle = {
+                opacity:opacity
+              };
+              this.showAbs = false
+            } else{
+              this.showAbs = true
+            }
           }
         },
         activated(){
           window.addEventListener('scroll',this.handleScroll)
+        },
+        deactivated(){
+          window.removeEventListener('scroll',this.handleScroll);
         }
     }
 </script>
