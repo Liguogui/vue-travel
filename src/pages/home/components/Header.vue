@@ -58,7 +58,6 @@
       text-align:center
       color: #fff
       .arrow-icon
-        margin-left :-.04rem
-        font-size: .24rem
-                                                                                                                                                                                                                }
+        margin-left: -.04rem
+        font-size : .24rem
 </style>
