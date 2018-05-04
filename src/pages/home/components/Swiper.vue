@@ -18,7 +18,7 @@
 </div>
 </template>
 
-<script>
+<script type='text/ecmascript-6'>
     export default{
       name:'HomeSwiper',
       props:{
@@ -37,7 +37,6 @@
           return this.swiperList.length
         }
       }
-
     }
 </script>
 

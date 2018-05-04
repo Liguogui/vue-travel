@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script>
+<script type='text/ecmascript-6'>
  import HomeHeader from "./components/Header.vue"
  import HomeSwiper from './components/Swiper.vue'
  import HomeIcons  from './components/Icons.vue'
