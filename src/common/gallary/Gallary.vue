@@ -22,9 +22,7 @@
         props:{
           imgs:{
             type:Array,
-            default (){
-              return [];
-            }
+            default:[]
           }
         },
         data(){
@@ -34,7 +32,6 @@
                 paginationType:'fraction',
                 observeParents:true,
                 observer:true
-
               }
             }
         },
